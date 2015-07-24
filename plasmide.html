@@ -5,8 +5,25 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 <link rel="stylesheet" href="/javascripts/main.js">
 <link rel="stylesheet"  type="text/css" href="/stylesheets/colorize.css" media="screen">
+<script type="text/javascript">
+function foo(response) {
+  var meta = response.meta;
+  var data = response.data;
+  console.log(meta);
+  console.log(data);
+}
+
+var script = document.createElement('script');
+script.src = 'https://api.github.com?callback=foo';
+
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 <body>
 <h5 class="bizon">test gh pages html</h5>
-<div style="width:791px;height:45px;border:2px inset #5643fe;background-color:#7c57fe;" class="bizon">test</div>
+<div style="width:791px;height:45px;border:2px inset #5643fe;background-color:#7cccfe;" class="bizon">test
+
+  <p>Open up your browser's console.</p>/div>
 </body>
+</html>
+
