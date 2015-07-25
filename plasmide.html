@@ -23,7 +23,7 @@ script.src = 'https://api.github.com?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 <script>
-$( document ).ready(function() {    console.log( "ready!" );
+$( document ).ready(function() {    alert( "ready!" );
 (function( $ ) {
  // First, check to see if cssHooks are supported
  if ( !$.cssHooks ) {  
@@ -43,7 +43,7 @@ $( document ).ready(function() {    console.log( "ready!" );
 });
 </script>
 <script>
-$( document ).ready(function() {    console.log( "ready!" );
+$( document ).ready(function() {   alert( "ready!" );
  $.getJSON( "ajax/test.json", function( data ) {  
   var items = [];  
   $.each( data, function( key, val ) {    
@@ -59,6 +59,7 @@ $( document ).ready(function() {    console.log( "ready!" );
 <body>
  <style>
   a{color:#ff5591;}
+  .bizon{width:791px;height:45px;border:2px inset #5643fe;background-color:#7cccfe;color:#5643fe;}
   
  </style>
 <h5 class="bizon">test gh pages html</h5>
