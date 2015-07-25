@@ -4,6 +4,7 @@
  <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <link rel="javascript" type="text/jscript" href="/javascripts/main.js">
 <link rel="stylesheet"  type="text/css" href="/stylesheets/colorize.css" media="screen">
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <title>origan</title>
 <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +23,37 @@ script.src = 'https://api.github.com?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 <script>
-(function( $ ) { // First, check to see if cssHooks are supportedif ( !$.cssHooks ) {  // If not, output an error message  throw( new Error( "jQuery 1.4.3 or above is required for this plugin to work" ) );} // Wrap in a document ready call, because jQuery writes// cssHooks at this time and will blow away your functions// if they exist.$(function () {  $.cssHooks[ "someCSSProp" ] = {    get: function( elem, computed, extra ) {      // Handle getting the CSS property    },    set: function( elem, value ) {      // Handle setting the CSS valuejQuery );
-
+$( document ).ready(function() {    console.log( "ready!" );
+(function( $ ) {
+ // First, check to see if cssHooks are supported
+ if ( !$.cssHooks ) {  
+  // If not, output an error message  
+  throw( new Error( "jQuery 1.4.3 or above is required for this plugin to work" ) );
+  
+ }
+ // Wrap in a document ready call, because jQuery writes
+ // cssHooks at this time and will blow away your functions
+ // if they exist.
+ $(function () {  
+ $.cssHooks[ "someCSSProp" ] = {    
+  get: function( elem, computed, extra ) {      
+   // Handle getting the CSS property    },    
+   set: function( elem, value ) {      
+   // Handle setting the CSS valuejQuery );
+});
 </script>
 <script>
- $.getJSON( "ajax/test.json", function( data ) {  var items = [];  $.each( data, function( key, val ) {    items.push( "<li id='" + key + "'>" + val + "</li>" );  });   $( "<ul/>", {    "class": "my-new-list",    html: items.join( "" )  }).appendTo( "body" );});
+$( document ).ready(function() {    console.log( "ready!" );
+ $.getJSON( "ajax/test.json", function( data ) {  
+  var items = [];  
+  $.each( data, function( key, val ) {    
+   items.push( "<li id='" + key + "'>" + val + "</li>" );  
+   
+  });   
+  $( "<ul/>", {    "class": "my-new-list",    html: items.join( "" )  }).appendTo( "body" );
+  
+ });
+});
 </script>
 </head>
 <body>
