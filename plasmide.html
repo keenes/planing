@@ -23,6 +23,10 @@ document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 <script>
 (function( $ ) { // First, check to see if cssHooks are supportedif ( !$.cssHooks ) {  // If not, output an error message  throw( new Error( "jQuery 1.4.3 or above is required for this plugin to work" ) );} // Wrap in a document ready call, because jQuery writes// cssHooks at this time and will blow away your functions// if they exist.$(function () {  $.cssHooks[ "someCSSProp" ] = {    get: function( elem, computed, extra ) {      // Handle getting the CSS property    },    set: function( elem, value ) {      // Handle setting the CSS valuejQuery );
+
+</script>
+<script>
+ $.getJSON( "ajax/test.json", function( data ) {  var items = [];  $.each( data, function( key, val ) {    items.push( "<li id='" + key + "'>" + val + "</li>" );  });   $( "<ul/>", {    "class": "my-new-list",    html: items.join( "" )  }).appendTo( "body" );});
 </script>
 </head>
 <body>
