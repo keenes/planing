@@ -1,1 +1,2 @@
-#!/bin/git init .Git
+#!/bin/git init keenes/planing/.Git
+$ git config --global core.editor emacs
