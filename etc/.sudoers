@@ -1,2 +1,3 @@
 $ curl https://hostname/api/v3/ -u keenes:Disponible123
+application/vnd.github.quicksilver-preview+json
 
