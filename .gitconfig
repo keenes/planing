@@ -1,3 +1,3 @@
 #!/bin/git init keenes/planing/.Git
-$ git config --global core.editor emacs
+$ git config --global core.editor wiki
 $ git config user.name
