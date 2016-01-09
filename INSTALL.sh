@@ -1,3 +1,3 @@
-#!/user/bin/ Bash.exe
+#!/user/bin/    bash.exe
 
 
