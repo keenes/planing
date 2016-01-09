@@ -1,3 +1,3 @@
-#!/Git/user/bin/bash.exe
+#!/./../Git/user/bin/bash.exe
 
 
