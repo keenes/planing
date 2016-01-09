@@ -1,3 +1,3 @@
-#!/user/bin/bash
+#!Git/user/bin/bash
 
 
